@@ -131,6 +131,10 @@ SUBSYSTEM_DEF(ticker)
 			if(!nuke_in_progress && game_finished)
 				current_state = GAME_STATE_FINISHED
 				Master.SetRunLevel(RUNLEVEL_POSTGAME)
+				//enable OOC back after round end
+				if(!config.ooc_allowed && !config.ooc_during_round)
+					config.ooc_allowed = 1
+					to_world("<B>OOC channel has been enabled due to round end.</B>")
 
 				spawn
 					declare_completion()
@@ -253,6 +257,11 @@ SUBSYSTEM_DEF(ticker)
 			admins_number++
 	if(admins_number == 0)
 		send2adminirc("Round has started with no admins online.")
+
+	//disables ooc due to round start
+	if(config.ooc_allowed && !config.ooc_during_round)
+		config.ooc_allowed = 0
+		to_world("<B>OOC channel has been disabled due to round start.</B>")
 
 	if(config.sql_enabled)
 		statistic_cycle() // Polls population totals regularly and stores them in an SQL DB -- TLE
