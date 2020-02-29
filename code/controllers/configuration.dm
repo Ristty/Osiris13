@@ -192,6 +192,7 @@ GLOBAL_LIST_EMPTY(storyteller_cache)
 	var/looc_allowed = 1
 	var/dooc_allowed = 1
 	var/dsay_allowed = 1
+	var/ooc_during_round = 0
 
 	var/starlight = "#ffffff"	// null if turned off
 
@@ -423,6 +424,9 @@ GLOBAL_LIST_EMPTY(storyteller_cache)
 				if ("disable_ooc")
 					config.ooc_allowed = 0
 					config.looc_allowed = 0
+
+				if ("ooc_during_round")
+					config.ooc_during_round = 1
 
 				if ("disable_entry")
 					config.enter_allowed = 0
