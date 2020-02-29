@@ -126,6 +126,11 @@
 		del(src)
 		return
 
+	if(config.useckeywhitelist && !CheckWhitelist(key))
+		alert(src,"This server doesn't allow non-whitelisted ckeys to play. Go to https://discord.gg/PuraXWG for more information.","Whitelist","OK")
+		del(src)
+		return
+
 	// Change the way they should download resources.
 	if(config.resource_urls)
 		src.preload_rsc = pick(config.resource_urls)

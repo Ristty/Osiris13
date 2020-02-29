@@ -1346,6 +1346,7 @@
 #include "code\modules\client\preferences_spawnpoints.dm"
 #include "code\modules\client\preferences_toggle.dm"
 #include "code\modules\client\ui_style.dm"
+#include "code\modules\client\whitelist.dm"
 #include "code\modules\client\edge_sliding\move_loop.dm"
 #include "code\modules\client\edge_sliding\keystate\1constants.dm"
 #include "code\modules\client\edge_sliding\keystate\1definitions.dm"

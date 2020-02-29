@@ -57,6 +57,7 @@ GLOBAL_LIST_EMPTY(storyteller_cache)
 	var/respawn_delay = 30
 	var/guest_jobban = 1
 	var/usewhitelist = 0
+	var/useckeywhitelist = 0
 	var/kick_inactive = 0				//force disconnect for inactive players after this many minutes, if non-0
 	var/show_mods = 0
 	var/show_mentors = 0
@@ -437,6 +438,9 @@ GLOBAL_LIST_EMPTY(storyteller_cache)
 
 				if ("usewhitelist")
 					config.usewhitelist = 1
+
+				if ("useckeywhitelist")
+					config.useckeywhitelist = 1
 
 				if ("allow_metadata")
 					config.allow_Metadata = 1
