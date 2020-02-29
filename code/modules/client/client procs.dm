@@ -127,7 +127,7 @@
 		return
 
 	if(config.useckeywhitelist && !CheckWhitelist(key))
-		alert(src,"This server doesn't allow non-whitelisted ckeys to play. Go to https://discord.gg/PuraXWG for more information.","Whitelist","OK")
+		to_chat(src,"This server doesn't allow non-whitelisted ckeys to play. Go to https://discord.gg/PuraXWG for more information.")
 		del(src)
 		return
 
