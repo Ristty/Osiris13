@@ -166,6 +166,12 @@
 	else
 		..()
 
+/obj/item/weapon/storage/fancy/cigarettes/schizco
+	name = "\improper SchiZCo packet"
+	desc = "A packet of six SchiZCo cigarettes, most popular cigarettes in all universe. Low price for poor quality. A label on the packaging reads, \"Mother-hospital awaits!\""
+	icon_state = "Spacket"
+	item_state = "Spacket"
+
 /obj/item/weapon/storage/fancy/cigarettes/dromedaryco
 	name = "\improper DromedaryCo packet"
 	desc = "A packet of six imported DromedaryCo cancer sticks. A label on the packaging reads, \"Wouldn't a slow death make a change?\""

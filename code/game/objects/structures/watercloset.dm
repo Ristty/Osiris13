@@ -407,16 +407,19 @@
 	playsound(loc, 'sound/effects/watersplash.ogg', 100, 1)
 
 	busy = 1
-	sleep(40)
-	busy = 0
+	if(do_after(user, 60, src))
+		busy = 0
 
-	if(!Adjacent(user)) return		//Person has moved away from the sink
+		if(!Adjacent(user)) return		//Person has moved away from the sink
 
-	user.clean_blood()
-	if(ishuman(user))
-		user:update_inv_gloves()
-	for(var/mob/V in viewers(src, null))
-		V.show_message(SPAN_NOTICE("[user] washes their hands using \the [src]."))
+		user.clean_blood()
+		if(ishuman(user))
+			user:update_inv_gloves()
+		for(var/mob/V in viewers(src, null))
+			V.show_message(SPAN_NOTICE("[user] washes their hands using \the [src]."))
+		var/mob/living/carbon/human/M = user
+		if(istype(M))
+			M.sanity.onSink()
 
 
 /obj/structure/sink/attackby(obj/item/O as obj, mob/living/user as mob)

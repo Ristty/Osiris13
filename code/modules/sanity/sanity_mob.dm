@@ -17,11 +17,13 @@
 // Damage received from seeing someone die
 #define SANITY_DAMAGE_DEATH(vig) (10 * SANITY_DAMAGE_MOD * (1 - (vig) / STAT_LEVEL_MAX))
 
-#define SANITY_GAIN_SMOKE 0.05 // A full cig restores 300 times that
+#define SANITY_GAIN_SMOKE 0.1 // A full cig restores 300 times that
 #define SANITY_GAIN_SAY 1
+#define SANITY_GAIN_SINK 5
 
 #define SANITY_COOLDOWN_SAY rand(30 SECONDS, 45 SECONDS)
 #define SANITY_COOLDOWN_BREAKDOWN rand(7 MINUTES, 10 MINUTES)
+#define SANITY_COOLDOWN_SINK rand(5 MINUTES, 10 MINUTES)
 
 #define SANITY_CHANGE_FADEOFF(level_change) (level_change * 0.75)
 
@@ -58,6 +60,7 @@
 	var/say_time = 0
 	var/breakdown_time = 0
 	var/spook_time = 0
+	var/sink_time = 0
 
 	var/list/datum/breakdown/breakdowns = list()
 
@@ -256,6 +259,12 @@
 		return
 	say_time = world.time + SANITY_COOLDOWN_SAY
 	changeLevel(SANITY_GAIN_SAY)
+
+/datum/sanity/proc/onSink()
+	if(world.time < sink_time)
+		return
+	sink_time = world.time + SANITY_COOLDOWN_SINK
+	changeLevel(SANITY_GAIN_SINK)
 
 
 /datum/sanity/proc/changeLevel(amount)
