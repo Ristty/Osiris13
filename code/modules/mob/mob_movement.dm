@@ -2,9 +2,16 @@
 	if(!mob)
 		return // Moved here to avoid nullrefs below
 	var/atom/movable/P = mob.pulling
+	var/last_area = mob.loc
 	mob.SelfMove(direction)
-	if(P && !ismob(P) && P.density)
-		mob.set_dir(turn(direction, 180))
+
+// Facing to pulling object
+	if(P)
+		if(last_area != mob&& !ismob(P) && P.density)
+			mob.set_dir(turn(direction, 180))
+		mob.stop_pulling(P)
+		if(P.Adjacent(mob))
+			mob.start_pulling(P)
 
 /mob/proc/SelfMove(var/direction)
 	if(DoMove(direction, src) & MOVEMENT_HANDLED)
