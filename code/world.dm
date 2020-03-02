@@ -237,15 +237,14 @@ var/world_topic_spam_protect_time = world.timeofday
 	var/s = ""
 
 	if (config && config.server_name)
-		s += "<b>[config.server_name]</b> &#8212; "
+		s += "<b>OSIRIS13.RU | Osiris SS13 Hi-RP</b> &#8212; "
 
-	s += "<b>[station_name()]</b>";
 	s += " ("
-	s += "<a href=\"http://\">" //Change this to wherever you want the hub to link to.
-//	s += "[game_version]"
-	s += "Default"  //Replace this with something else. Or ever better, delete it and uncomment the game version.
+	s += "<a href=\"https://discord.gg/PuraXWG\">" //Change this to wherever you want the hub to link to.
+	s += "Discord"  //Replace this with something else. Or ever better, delete it and uncomment the game version.
 	s += "</a>"
 	s += ")"
+	s += "Russian High RP project based on <b>CEV Eris</b> with <b>Whitelist</b>. Join our Discord to find out more information."
 
 	var/list/features = list()
 
@@ -258,13 +257,13 @@ var/world_topic_spam_protect_time = world.timeofday
 	if (!config.enter_allowed)
 		features += "closed"
 
-	features += config.abandon_allowed ? "respawn" : "no respawn"
+//	features += config.abandon_allowed ? "respawn" : "no respawn"
 
-	if (config && config.allow_vote_mode)
-		features += "vote"
+//	if (config && config.allow_vote_mode)
+//		features += "vote"
 
-	if (config && config.allow_ai)
-		features += "AI allowed"
+//	if (config && config.allow_ai)
+//		features += "AI allowed"
 
 	var/n = 0
 	for (var/mob/M in GLOB.player_list)
@@ -272,13 +271,13 @@ var/world_topic_spam_protect_time = world.timeofday
 			n++
 
 	if (n > 1)
-		features += "~[n] players"
+		features += "~[n] roleplayers"
 	else if (n > 0)
-		features += "~[n] player"
+		features += "~[n] roleplayer"
 
 
-	if (config && config.hostedby)
-		features += "hosted by <b>[config.hostedby]</b>"
+//	if (config && config.hostedby)
+//		features += "hosted by <b>[config.hostedby]</b>"
 
 	if (features)
 		s += ": [jointext(features, ", ")]"
