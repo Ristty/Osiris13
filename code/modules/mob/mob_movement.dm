@@ -7,7 +7,7 @@
 
 // Facing to pulling object
 	if(P)
-		if(last_area != mob&& !ismob(P) && P.density)
+		if(last_area != mob.loc && !ismob(P) && P.density)
 			mob.set_dir(turn(direction, 180))
 		mob.stop_pulling(P)
 		if(P.Adjacent(mob))
