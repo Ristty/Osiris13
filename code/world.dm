@@ -244,7 +244,7 @@ var/world_topic_spam_protect_time = world.timeofday
 	s += "Discord"  //Replace this with something else. Or ever better, delete it and uncomment the game version.
 	s += "</a>"
 	s += ")"
-	s += "Russian High RP project based on <b>CEV Eris</b> with <b>Whitelist</b>. Join our Discord to find out more information."
+	s += " Russian High RP project based on <b>CEV Eris</b> with <b>Whitelist</b>. Join our Discord to find out more information "
 
 	var/list/features = list()
 
