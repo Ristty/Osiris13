@@ -961,13 +961,13 @@
 	price_tag = 250
 
 /obj/item/weapon/storage/fancy/cigarettes/dromedaryco
-	price_tag = 80
+	price_tag = 120
 
 /obj/item/weapon/storage/fancy/cigarettes/killthroat
-	price_tag = 65
+	price_tag = 100
 
 /obj/item/weapon/storage/fancy/cigarettes/schizco
-	price_tag = 40
+	price_tag = 80
 
 /obj/item/weapon/storage/box/matches
 	price_tag = 10

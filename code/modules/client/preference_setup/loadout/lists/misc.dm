@@ -3,12 +3,17 @@
 	path = /obj/item/weapon/book/ritual/cruciform
 	cost = 2
 
+/datum/gear/steel_ashtray
+	display_name = "steel ashtray"
+	path = /obj/item/weapon/material/ashtray
+	cost = 2
+
 /datum/gear/flashlight
-	display_name = "Flashlight"
+	display_name = "flashlight"
 	path = /obj/item/device/lighting/toggleable/flashlight
 
 /datum/gear/crowbar
-	display_name = "Crowbar"
+	display_name = "crowbar"
 	path = /obj/item/weapon/tool/crowbar
 
 /datum/gear/cane
@@ -109,11 +114,13 @@
 
 /datum/gear/lipstick
 	display_name = "lipstick selection"
+	sort_category = "Cosmetics"
 	path = /obj/item/weapon/lipstick
 	flags = GEAR_HAS_TYPE_SELECTION
 
 /datum/gear/comb
 	display_name = "plastic comb"
+	sort_category = "Cosmetics"
 	path = /obj/item/weapon/haircomb
 	flags = GEAR_HAS_COLOR_SELECTION
 
@@ -137,6 +144,10 @@
 /datum/gear/lighter
 	display_name = "cheap lighter"
 	path = /obj/item/weapon/flame/lighter
+
+/datum/gear/schizco_packet
+	display_name = "SchiZCo cigarette packet"
+	path = /obj/item/weapon/storage/fancy/cigarettes/schizco
 
 /datum/gear/zippo
 	display_name = "zippo"

@@ -8,6 +8,7 @@
 /* Setup new backpacks here */
 /decl/backpack_outfit/nothing
 	name = "Nothing"
+	is_default = TRUE
 
 /decl/backpack_outfit/nothing/spawn_backpack(var/location, var/metadata, var/desired_type)
 	return
@@ -23,7 +24,10 @@
 /decl/backpack_outfit/satchel
 	name = "Satchel"
 	path = /obj/item/weapon/storage/backpack/satchel
-	is_default = TRUE
+
+/decl/backpack_outfit/dufflebag
+	name = "Dufflebag"
+	path = /obj/item/weapon/storage/backpack/dufflebag
 
 /* Code */
 /decl/backpack_outfit

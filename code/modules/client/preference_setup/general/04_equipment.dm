@@ -182,7 +182,7 @@
 			/decl/backpack_outfit/backsport,
 			/decl/backpack_outfit/backpack,
 			/decl/backpack_outfit/satchel,
-			/decl/backpack_outfit/satchel,
+			/decl/backpack_outfit/dufflebag,
 		)
 
 		var/old_index

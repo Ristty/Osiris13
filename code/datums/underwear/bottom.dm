@@ -42,5 +42,22 @@
 	icon_state = "m6"
 	has_color = TRUE
 
+/datum/category_item/underwear/bottom/boxers_loveheart
+	name = "Boxers, Loveheart"
+	underwear_name = "boxers"
+	icon_state = "m7"
+
+/datum/category_item/underwear/bottom/boxers
+	name = "Boxers"
+	underwear_name = "boxers"
+	icon_state = "m8"
+	has_color = TRUE
+
+/datum/category_item/underwear/bottom/panties
+	name = "Panties"
+	underwear_name = "panties"
+	icon_state = "m9"
+	has_color = TRUE
+
 /datum/category_item/underwear/bottom/panties_noback/is_default(var/gender)
 	return gender == FEMALE

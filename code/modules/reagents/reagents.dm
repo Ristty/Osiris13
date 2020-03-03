@@ -179,23 +179,23 @@
 
 // Addiction
 /datum/reagent/proc/addiction_act_stage1(mob/living/carbon/M)
-	if(prob(30))
+	if(prob(1))
 		to_chat(M, SPAN_NOTICE("You feel like having some [name] right about now."))
 
 /datum/reagent/proc/addiction_act_stage2(mob/living/carbon/M)
-	if(prob(30))
-		to_chat(M, SPAN_NOTICE("You feel like you need [name]. You just can't get enough."))
+	if(prob(10))
+		to_chat(M, SPAN_NOTICE("You feel like having some [name] right about now."))
 
 /datum/reagent/proc/addiction_act_stage3(mob/living/carbon/M)
-	if(prob(30))
-		to_chat(M, SPAN_DANGER("You have an intense craving for [name]."))
+	if(prob(20))
+		to_chat(M, SPAN_DANGER("You feel like you need [name]. You just can't get enough."))
 
 /datum/reagent/proc/addiction_act_stage4(mob/living/carbon/M)
 	if(prob(30))
-		to_chat(M, SPAN_DANGER("You're not feeling good at all! You really need some [name]."))
+		to_chat(M, SPAN_DANGER("You have an intense craving for [name]."))
 
 /datum/reagent/proc/addiction_end(mob/living/carbon/M)
-	to_chat(M, SPAN_NOTICE("You feel like you've gotten over your need for [name]."))
+	to_chat(M, SPAN_NOTICE("You're not feeling good at all! You really need some [name]."))
 
 // Withdrawal
 /datum/reagent/proc/withdrawal_start(mob/living/carbon/M)
